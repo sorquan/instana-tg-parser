@@ -1,0 +1,11 @@
+version: '3'
+services:
+  instana-tg-parser:
+    container_name: instana-tg-parser
+    image: instana-tg-parser:latest
+    build: ./instana-tg-parser
+    ports:
+      - 5000:5000
+    env_file:
+      - .env
+    restart: always
